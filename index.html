@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url(https://i.pinimg.com/originals/fb/04/d3/fb04d3b5fdf787faa7de8a6ace501f61.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        
+      }
+
+      form {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 200px;
+        text-align: center;
+      }
+      
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: none;
+        background-color: rgb(3, 63, 69);
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(3, 63, 69);
+      }
+
+      .weather-info {
+        margin-top: 20px;
+        display: block;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      
+      .container {
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 80px;
+          background-color: #f1f1f1;
+          border: 1px solid #ccc;
+          border-radius: 30%;
+          opacity: 0.7;
+        }
+
+      h1 {
+        text-align: center;
+        color: rgb(3, 63, 69);
+      } 
+
+      h2, h3, p {
+        text-shadow: #9e1241;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(3, 63, 69);
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>What's the weather forecast?</h1>
+    <form id="weather-form">
+      <input type="text" id="location-input"  value="Enter a city or zip code" 
+        onfocus=" if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue"  />
+      <button type="submit">Get Weather</button>
+    </form>
+    <div class="container">
+      <div class="weather-info">
+        <div>
+          <h3>Temperature</h3>
+          <p id="temperature"></p>
+        </div>
+        <div>
+          <h3>Humidity</h3>
+          <p id="humidity"></p>
+        </div>
+        <div>
+          <h3>Wind Speed</h3>
+          <p id="wind-speed"></p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <script src="dist/index.js"></script>
+  </body>
+</html>
